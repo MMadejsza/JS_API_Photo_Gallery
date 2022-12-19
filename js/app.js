@@ -1,6 +1,9 @@
 class Dog {
 	constructor() {
 		this.apiUrl = 'https://dog.ceo/api';
+		this.imgElement = document.querySelector('.featured__dog img');
+
+		this.init();
 	}
 
 	fetchBreeds() {
@@ -12,7 +15,7 @@ class Dog {
 	}
 
 	getRandomDogImage() {
-		return fetch(`${this.apiUrl}/api/breeds/image/random`)
+		return fetch(`${this.apiUrl}/breeds/image/random`)
 			.then((resp) => resp.json())
 			.then((data) => data.message);
 	}
@@ -22,4 +25,11 @@ class Dog {
 			.then((resp) => resp.json())
 			.then((data) => data.message);
 	}
+
+	init() {
+		this.getRandomDogImage().then((src) => this.imgElement.setAttribute('src', src));
+		this.fetchBreeds().then((breeds) => console.log(breeds));
+	}
 }
+
+document.addEventListener('DOMContentLoaded', () => new Dog());

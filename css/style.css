@@ -444,6 +444,10 @@ path {
   line-height: 1.5;
 }
 
+span {
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;

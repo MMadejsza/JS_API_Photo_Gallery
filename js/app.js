@@ -3,6 +3,7 @@ class Dog {
 		this.apiUrl = 'https://dog.ceo/api';
 		this.imgElement = document.querySelector('.featured-dog img');
 		this.bcgElement = document.querySelector('.featured-dog__background');
+		this.dogDescriptionElement = document.querySelector('.featured-dog__description p');
 		this.tilesElement = document.querySelector('.tiles');
 		this.spinnerElement = document.querySelector('.spinner');
 		this.init();
@@ -45,10 +46,12 @@ class Dog {
 		let name;
 		let type;
 		if (typeof subBreed == 'undefined') {
-			name = breed;
+			name = breed.charAt(0).toUpperCase() + breed.slice(1);
 			type = breed;
 		} else {
-			name = `${breed} ${subBreed}`;
+			name = `${breed.charAt(0).toUpperCase() + breed.slice(1)} ${
+				subBreed.charAt(0).toUpperCase() + subBreed.slice(1)
+			}`;
 			type = `${breed}/${subBreed}`;
 		}
 
@@ -63,6 +66,7 @@ class Dog {
 			this.getRandomDogImageOfBreed(type).then((receivedSrc) =>
 				this.showImgWhenReady(receivedSrc),
 			);
+			this.dogDescriptionElement.innerHTML = `<p>Chosen breed: <span>${name}</span></p>`;
 		});
 		tile.appendChild(tileContent);
 		this.tilesElement.appendChild(tile);

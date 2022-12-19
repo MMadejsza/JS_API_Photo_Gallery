@@ -421,6 +421,29 @@ textarea {
   padding: 0.2em 0;
 }
 
+html,
+body {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-weight: lighter;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin: 16px 0;
+}
+
+path {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
 .container {
   width: 100%;
   max-width: 1024px;

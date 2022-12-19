@@ -27,14 +27,6 @@ class Dog {
 			.then((data) => data.message);
 	}
 
-	init() {
-		this.getRandomDogImage().then((src) => {
-			this.imgElement.setAttribute('src', src);
-			this.bcgElement.style.background = `url("${src}")`;
-		});
-		this.showAllBreeds();
-	}
-
 	addBreed(breed, subBreed) {
 		let name;
 		let type;
@@ -73,6 +65,13 @@ class Dog {
 				}
 			}
 		});
+	}
+	init() {
+		this.getRandomDogImage().then((src) => {
+			this.imgElement.setAttribute('src', src);
+			this.bcgElement.style.background = `url("${src}")`;
+		});
+		this.showAllBreeds();
 	}
 }
 

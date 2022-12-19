@@ -433,7 +433,36 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.featured-dog__wrapper {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 400px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+.featured-dog__wrapper .featured-dog__image {
+  position: relative;
+}
+.featured-dog__wrapper .featured-dog__image img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.featured-dog__description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 16px;
 }/*# sourceMappingURL=style.css.map */

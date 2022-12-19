@@ -444,6 +444,13 @@ path {
   line-height: 1.5;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .container {
   width: 100%;
   max-width: 1024px;
@@ -500,4 +507,32 @@ path {
       -ms-flex: 1;
           flex: 1;
   padding: 0 16px;
+}
+
+.tiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -16px;
+}
+.tiles .tiles__tile {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3%;
+          flex: 0 1 33.3%;
+  padding: 10px 16px 5px;
+  margin-bottom: 8px;
+}
+.tiles .tiles__tile-content {
+  cursor: pointer;
+  background-color: teal;
+  padding: 16px;
+  color: #f8f8f8;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.tiles .tiles__tile-content:hover {
+  background-color: #004d4d;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+@import '_variables';
+.tiles {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 $main-spacing * -1;
+	.tiles__tile {
+		flex: 0 1 33.3%;
+		padding: 10px $main-spacing 5px;
+		margin-bottom: $main-spacing / 2;
+	}
+	.tiles__tile-content {
+		cursor: pointer;
+		background-color: $primary-color;
+		padding: $main-spacing;
+		color: $tile-text-color;
+		text-align: center;
+		transition: 0.5s;
+		&:hover {
+			background-color: darken($primary-color, 10%);
+		}
+	}
+}

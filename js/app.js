@@ -1,7 +1,7 @@
 class Dog {
 	constructor() {
 		this.apiUrl = 'https://dog.ceo/api';
-		this.imgElement = document.querySelector('.featured__dog img');
+		this.imgElement = document.querySelector('.featured-dog img');
 
 		this.init();
 	}

@@ -1,7 +1,7 @@
 # JS_API_Photo_Gallery
 Practicing calling API with JS "fetch". Gallery based on example of dogs dataset from https://dog.ceo/dog-api/.
 
-## Website: https://mmadejsza.github.io/JS_API_Photo_Gallery/
+## Website: https://mmadejsza.github.io/JS_API_Photo_Gallery/?version=9b00c6d3bcc4f8e150eb45a0a692a0fa22a8c61a
 ## Uses inter alia concepts of:
 ### JS
 fetch, OOP, .this binding with arrow functions
